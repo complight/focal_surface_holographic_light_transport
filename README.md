@@ -9,10 +9,26 @@
 [Manuscript](https://kaanaksit.com/assets/pdf/ZhengEtAl_SigAsia2024_Focal_surface_holographic_light_transport_using_learned_spatially_adaptive_convolutions.pdf)
 [Supplementary](https://kaanaksit.com/assets/pdf/ZhengEtAl_SigAsia2024_Supplementary_Focal_surface_holographic_light_transport_using_learned_spatially_adaptive_convolutions.pdf)
 
+## Getting started
+
+### (0) Requirments
 
 
+### (0) Requirments
 
+Please make sure to have the right dependencies installed.
+```bash
+pip3 install -r requirements.txt
+```
 
+### (2) Testing
+Start testing by by providing the below syntax:
+
+```bash
+git clone git@github.com:complight/focal_surface_holographic_light_transport.git
+cd focal_surface_holographic_light_transport
+python test.py  
+```
 
 
 # Citation

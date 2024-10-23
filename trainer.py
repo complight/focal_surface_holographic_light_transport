@@ -22,6 +22,7 @@ class Trainer():
             self.model.load(apath = ckp.dir)
             self.loss.load(apath = ckp.dir)
 
+
     def train(self):
         self.loss.step()
         lr = self.optimizer.state_dict()['param_groups'][0]['lr']

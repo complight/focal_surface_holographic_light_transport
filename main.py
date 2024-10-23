@@ -10,7 +10,7 @@ import os
 def main():
     # setting
     os.environ['CUDA_VISIBLE_DEVICES'] = '0'
-    settings_filename = './settings/sample-zero-1.txt'
+    settings_filename = './settings/sample-zero.txt'
     settings = odak.tools.load_dictionary(settings_filename)
     checkpoint = utility.checkpoint(settings)
     train_depth_dir = settings["train"]["train depth file"]

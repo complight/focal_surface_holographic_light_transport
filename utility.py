@@ -8,52 +8,57 @@ import torchvision.utils as vutils
 import numpy as np
 import math
 
+
 def make_optimizer(setting, target):
-    '''
-        make optimizer and scheduler together
-    '''
     # optimizer
     trainable = filter(lambda x: x.requires_grad, target.parameters())
     kwargs_optimizer = {'lr': setting["optimizer"]["learning rate"], 'weight_decay': setting["optimizer"]["weight_decay"]}
     optimizer_class = optim.Adam
     kwargs_optimizer['betas'] = setting["optimizer"]["betas"]
     kwargs_optimizer['eps'] = setting["optimizer"]["epsilon"]
-
     # scheduler
     milestones = setting["optimizer"]["milestones"]
     kwargs_scheduler = {'milestones': milestones, 'gamma':setting["optimizer"]["gamma"]}
     scheduler_class = lrs.MultiStepLR
 
+
     class CustomOptimizer(optimizer_class):
         def __init__(self, *args, **kwargs):
             super(CustomOptimizer, self).__init__(*args, **kwargs)
 
+
         def _register_scheduler(self, scheduler_class, **kwargs):
             self.scheduler = scheduler_class(self, **kwargs)
 
+
         def save(self, save_dir):
             torch.save(self.state_dict(), self.get_dir(save_dir))
+
 
         def load(self, load_dir, epoch=1):
             self.load_state_dict(torch.load(self.get_dir(load_dir)))
             if epoch > 1:
                 for _ in range(epoch): self.scheduler.step()
 
+
         def get_dir(self, dir_path):
             return os.path.join(dir_path, 'optimizer.pt')
+
 
         def schedule(self):
             self.scheduler.step()
 
+
         def get_lr(self):
             return self.scheduler.get_lr()[0]
+
 
         def get_last_epoch(self):
             return self.scheduler.last_epoch
 
+
     optimizer = CustomOptimizer(trainable, **kwargs_optimizer)
     optimizer._register_scheduler(scheduler_class, **kwargs_scheduler)
-
     return optimizer
 
 
@@ -62,22 +67,26 @@ class timer():
         self.acc = 0
         self.tic()
 
+
     def tic(self):
         self.t0 = time.time()
+
 
     def toc(self, restart=False):
         diff = time.time() - self.t0
         if restart: self.t0 = time.time()
         return diff
 
+
     def hold(self):
         self.acc += self.toc()
+
 
     def release(self):
         ret = self.acc
         self.acc = 0
-
         return ret
+
 
     def reset(self):
         self.acc = 0
@@ -87,13 +96,11 @@ class checkpoint():
     def __init__(self, setting):
         self.setting = setting
         self.log = torch.Tensor()
-
         self.dir = os.path.join('..', 'experiment')
         if os.path.exists(self.get_path('psnr_log.pt')):
 
                 self.log = torch.load(self.get_path('psnr_log.pt'))
                 print('Continue from epoch {}...'.format(len(self.log)))
-
         try:
             os.makedirs(self.dir)
         except OSError:
@@ -149,7 +156,6 @@ class checkpoint():
         label = 'test results'
         fig = plt.figure()
         plt.title(label)
-
         plt.plot(axis, self.log.numpy())
         plt.legend()
         plt.xlabel('Epochs')

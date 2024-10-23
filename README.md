@@ -28,20 +28,21 @@ python test.py
 ```
 
 ### (3) Training
-#### (3.1) preparing your dataset
+#### (3.1) Preparing your dataset
 
 We strongly encourage you to refer to the previous work of our group,
 [multicolor](https://github.com/complight/multicolor), to generate the
 dataset based on your own settings. Alternatively, you can directly
 use `odak.learn.wave.multi_color_hologram_optimizer`.
 
-#### (3.2) Revising the settingx
+#### (3.2) Revising the settings
 
 
 Please consult the settings file found in `sample_zero.txt`, where you will find a list of self descriptive variables that you can modify according to your needs.
 This way, you can create a new settings file or modify the existing one.
 
 #### (3.3) Starting training.
+
 ```shell
 python3 main.py --settings sample_zero.txt
 ```

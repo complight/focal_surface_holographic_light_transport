@@ -2,7 +2,7 @@ import odak
 import loss
 import model
 from trainer import Trainer
-from rgb_data import DatasetFromFolder
+from data_loader import DatasetFromFolder
 import utility
 import os
 

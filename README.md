@@ -13,16 +13,13 @@
 
 ### (0) Requirments
 
-
-### (0) Requirments
-
 Please make sure to have the right dependencies installed.
 ```bash
 pip3 install -r requirements.txt
 ```
 
 ### (2) Testing
-Start testing by by providing the below syntax:
+You can start testing using the following syntax:
 
 ```bash
 git clone git@github.com:complight/focal_surface_holographic_light_transport.git
@@ -30,8 +27,32 @@ cd focal_surface_holographic_light_transport
 python test.py  
 ```
 
+### (3) Training
+#### (3.1) preparing your dataset
+
+We strongly encourage you to refer to the previous work of our group,
+[multicolor](https://github.com/complight/multicolor), to generate the
+dataset based on your own settings. Alternatively, you can directly
+use `odak.learn.wave.multi_color_hologram_optimizer`.
+
+#### (3.2) Revising the settingx
+
+
+Please consult the settings file found in `sample_zero.txt`, where you will find a list of self descriptive variables that you can modify according to your needs.
+This way, you can create a new settings file or modify the existing one.
+
+#### (3.3) Starting training.
+```shell
+python3 main.py --settings sample_zero.txt
+```
+
+## Support
+For more support regarding the code base, please use the issues section of this repository to raise issues and questions.
+
 
 # Citation
+If you find our work useful in your research, please consider citing:
+
 ```bibtex
         @inproceedings{zheng2024focalholography,
           title={Focal Surface Holographic Light Transport using Learned Spatially Adaptive Convolutions},

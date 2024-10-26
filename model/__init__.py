@@ -12,7 +12,7 @@ class Model(nn.Module):
         self.settings = settings
         self.device = self.settings["general"]["device"]
         module = import_module('model.' + self.settings["general"]["model"])
-        self.model = module.make_model().to(self.device)
+        self.model = module.make_model( settings).to(self.device)
         print(self.model, ckp.log_file)
 
 

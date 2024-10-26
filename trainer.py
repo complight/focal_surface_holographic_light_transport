@@ -44,7 +44,7 @@ class Trainer():
             timer_data.hold()
             timer_model.tic()
             self.optimizer.zero_grad()
-            recons = self.model(phase, depth)
+            recons = self.model( depth,phase)
             loss = self.loss(mask * recons, mask * target, (1 - mask) * recons, (1 - mask) * target, recons, target)
             loss.backward()
             self.optimizer.step()
@@ -78,7 +78,7 @@ class Trainer():
             phase = phase.to(self.device)
             depth = depth.to(self.device)
             target = target.to(self.device)
-            recons = self.model(phase, depth)
+            recons = self.model( depth,phase)
             if epoch > 100:
                 save_list.append(recons)
                 name_list.append(image_id)

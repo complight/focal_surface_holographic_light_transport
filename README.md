@@ -17,7 +17,13 @@ Please make sure to have the right dependencies installed.
 ```bash
 pip3 install -r requirements.txt
 ```
-
+Install the latest version of Odak.
+```bash
+git clone git@github.com:kaanaksit/odak.git
+cd odak
+pip3 install -r requirements.txt
+pip3 install -e .
+```
 ### (2) Testing
 You can start testing using the following syntax:
 

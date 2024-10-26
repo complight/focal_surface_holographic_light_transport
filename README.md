@@ -44,7 +44,7 @@ This way, you can create a new settings file or modify the existing one.
 #### (3.3) Starting training
 
 ```shell
-python main.py --settings sample_zero.txt
+python main.py 
 ```
 
 ## Support

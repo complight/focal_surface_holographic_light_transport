@@ -30,28 +30,20 @@
                     },
 
     "train"       :{
-                     "train depth file"      : "/scratch/zheng.chua/RGB_freeform_dataset/train/depth/",
-                     "train phase file"      : "/scratch/zheng.chua/multicolor_dataset/train/phase/",
-                     "train target file"     : "/scratch/zheng.chua/RGB_freeform_dataset/train/target/",
-                     "train mask file"       : "/scratch/zheng.chua/RGB_freeform_dataset/train/mask/",
+                     "train depth file"      : "/dataset/train/depth/",
+                     "train phase file"      : "/dataset/train/phase/",
+                     "train target file"     : "/dataset/train/target/",
+                     "train mask file"       : "/dataset/train/mask/",
                      "batch_size"            :1,
                      "num_workers"           :4
                      },
 
 
-    "validation"       :{
-                     "validation depth file"      : "/scratch/zheng.chua/random_test_dataset/depth/",
-                     "validation phase file"      : "/scratch/zheng.chua/depth/datageneration/test/phase/",
-                     "validation target file"     : "/scratch/zheng.chua/random_test_dataset/target/",
-                     "validation mask dir"        : "/scratch/zheng.chua/random_test_dataset/mask/"
-                     },
-
-
     "test"       :{
-                      "test depth file"      : "/scratch/zheng.chua/RGB_freeform_dataset/test/depth/",
-                     "test phase file"      : "/scratch/zheng.chua/multicolor_dataset/test/phase/",
-                     "test target file"     : "/scratch/zheng.chua/RGB_freeform_dataset/test/target/",
-                     "test mask file"       : "/scratch/zheng.chua/RGB_freeform_dataset/test/mask/"
+                      "test depth file"      : "/dataset/test/depth/",
+                     "test phase file"      : "/dataset/test/phase/",
+                     "test target file"     : "/dataset/test/target/",
+                     "test mask file"       : "/dataset/test/mask/"
                      }
 
 

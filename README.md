@@ -61,15 +61,15 @@ For more support regarding the code base, please use the issues section of this 
 If you find our work useful in your research, please consider citing:
 
 ```bibtex
-        @inproceedings{zheng2024focalholography,
-          title={Focal Surface Holographic Light Transport using Learned Spatially Adaptive Convolutions},
-          author={Chuanjun Zheng, Yicheng Zhan, Liang Shi, Ozan Cakmakci, and Kaan Ak{\c{s}}it},
-          booktitle = {SIGGRAPH Asia 2024 Technical Communications (SA Technical Communications '24)},
-          keywords = {Computer-Generated Holography, Light Transport, Optimization},
-          location = {Tokyo, Japan},
-          series = {SA '24},
-          month={December},
-          year={2024},
-          doi={https://doi.org/10.1145/3681758.3697989}
-        }
+@inproceedings{zheng2024focalholography,
+  title={Focal Surface Holographic Light Transport using Learned Spatially Adaptive Convolutions},
+  author={Chuanjun Zheng, Yicheng Zhan, Liang Shi, Ozan Cakmakci, and Kaan Ak{\c{s}}it},
+  booktitle = {SIGGRAPH Asia 2024 Technical Communications (SA Technical Communications '24)},
+  keywords = {Computer-Generated Holography, Light Transport, Optimization},
+  location = {Tokyo, Japan},
+  series = {SA '24},
+  month={December},
+  year={2024},
+  doi={https://doi.org/10.1145/3681758.3697989}
+}
 ```

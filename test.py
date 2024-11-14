@@ -51,6 +51,7 @@ def test(output_directory = 'test_output'):
 
     # Perform the focal surface light propagation model
     result = focal_surface_light_propagation_model(focal_surface, hologram_phases)
+    odak.tools.check_directory(output_directory)
     odak.learn.tools.save_image(
                                 '{}/reconstruction_image.png'.format(output_directory),
                                 result,

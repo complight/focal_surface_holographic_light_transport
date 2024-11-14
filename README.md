@@ -1,6 +1,6 @@
 # Focal Surface Holographic Light Transport using Learned Spatially Adaptive Convolutions
 
-[Chuanjun Zheng](https://scholar.google.com.hk/citations?user=9Jk_LC8AAAAJ&hl=zh-CN), [Yicheng Zhan](https://scholar.google.com/citations?hl=zh-CN&user=x2ptSYUAAAAJ), [Liang Shi](https://people.csail.mit.edu/liangs/),[Ozan Cakmakci](https://scholar.google.com/citations?user=xZLjeAMAAAAJ&hl=en),[Kaan Akşit](https://kaanaksit.com) 
+[Chuanjun Zheng](https://scholar.google.com.hk/citations?user=9Jk_LC8AAAAJ&hl=zh-CN), [Yicheng Zhan](https://scholar.google.com/citations?hl=zh-CN&user=x2ptSYUAAAAJ), [Liang Shi](https://people.csail.mit.edu/liangs/), [Ozan Cakmakci](https://scholar.google.com/citations?user=xZLjeAMAAAAJ&hl=en), [Kaan Akşit](https://kaanaksit.com) 
 
 <img src='./media/teaser0.png' width=800>
 

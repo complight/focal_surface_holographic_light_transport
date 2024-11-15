@@ -29,13 +29,20 @@ pip3 install -e .
 ```
 ### (1) Testing
 You can start testing using the following syntax:
+ 
 
+#### (1.1)  Default test
 ```bash
 git clone git@github.com:complight/focal_surface_holographic_light_transport.git
 cd focal_surface_holographic_light_transport
 python test.py  
 ```
 After running the script, you can find the output in the `test_output` directory. The primary result of the test will be the reconstructed image, which will be saved as `reconstruction_image.png`. 
+#### (1.2) Customizing the test
+If you would like to test with a different focal surface file or change the output directory, you can specify these as arguments when running the script:
+```bash
+python test.py --focal_surface_filename ./path/to/your/focal_surface.png --hologram_phase_filename ./path/to/your/hologram.png --output_directory ./path/to/output
+```
 
 ### (2) Training
 #### (2.1) Preparing your dataset

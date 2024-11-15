@@ -2,7 +2,11 @@
 
 [Chuanjun Zheng](https://scholar.google.com.hk/citations?user=9Jk_LC8AAAAJ&hl=zh-CN), [Yicheng Zhan](https://scholar.google.com/citations?hl=zh-CN&user=x2ptSYUAAAAJ), [Liang Shi](https://people.csail.mit.edu/liangs/), [Ozan Cakmakci](https://scholar.google.com/citations?user=xZLjeAMAAAAJ&hl=en), [Kaan Akşit](https://kaanaksit.com) 
 
-<img src='./media/teaser0.png' width=800>
+
+<video autoplay loop controls>
+  <source src="./media/focal_surface.mov" type="video/quicktime">
+  Your browser does not support the video tag.
+</video>
 
 [Project Site](https://complightlab.com/publications/focal_surface_light_transport/)
 [Arxiv](https://arxiv.org/abs/2410.06854)
@@ -24,7 +28,7 @@ cd odak
 pip3 install -r requirements.txt
 pip3 install -e .
 ```
-### (2) Testing
+### (1) Testing
 You can start testing using the following syntax:
 
 ```bash
@@ -33,21 +37,21 @@ cd focal_surface_holographic_light_transport
 python test.py  
 ```
 
-### (3) Training
-#### (3.1) Preparing your dataset
+### (2) Training
+#### (2.1) Preparing your dataset
 
 We strongly encourage you to refer to the previous work of our group,
 [multicolor](https://github.com/complight/multicolor), to generate the
 dataset based on your own settings. Alternatively, you can directly
 use `odak.learn.wave.multi_color_hologram_optimizer`.
 
-#### (3.2) Revising the settings
+#### (2.2) Revising the settings
 
 
 Please consult the settings file found in `sample_zero.txt`, where you will find a list of self descriptive variables that you can modify according to your needs.
 This way, you can create a new settings file or modify the existing one.
 
-#### (3.3) Starting training
+#### (2.3) Starting training
 
 ```shell
 python main.py 

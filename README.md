@@ -4,7 +4,7 @@
 
 <img src='./media/teaser0.png' width=800>
 
-
+![Focal Surface](./media/focal_surface.gif)
 
 
 [Project Site](https://complightlab.com/publications/focal_surface_light_transport/)

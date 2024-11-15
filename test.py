@@ -3,9 +3,29 @@ import os
 import odak
 import torch
 import requests
+import argparse
 
+parser = argparse.ArgumentParser(description="process files")
+parser.add_argument(
+    '--focal_surface_filename',
+    type = str,
+    default = './dataset/test/focal_surface/sample_0343_focal_surface.png',
+    help = 'path to the focal surface file'
+)
+parser.add_argument(
+    '--hologram_phase_filename',
+    type = str,
+    default = './dataset/test/hologram/sample_0343_hologram.png',
+    help = 'path to the hologram file'
+)
+parser.add_argument(
+    '--output_directory',
+    type = str,
+    default = 'test_output',
+    help = 'directory to save the output'
+)
 
-def test(output_directory = 'test_output'):
+def test(focal_surface_filename,hologram_phases_filename,output_directory):
     number_of_planes = 6
     location_offset = 0.
     volume_depth = 5e-3
@@ -18,7 +38,6 @@ def test(output_directory = 'test_output'):
 
 
     # Preparing focal surface
-    focal_surface_filename ='./dataset/test/focal_surface/sample_0343_focal_surface.png'
     focal_surface = odak.learn.tools.load_image(
                                                 focal_surface_filename,
                                                 normalizeby = 255.,
@@ -34,7 +53,6 @@ def test(output_directory = 'test_output'):
     focal_surface = focal_surface.unsqueeze(0).unsqueeze(0)
 
     # Preparing hologram
-    hologram_phases_filename =  './dataset/test/hologram/sample_0343_hologram.png'
     hologram_phases = odak.learn.tools.load_image(
                                                   hologram_phases_filename,
                                                   normalizeby = 255.,
@@ -66,4 +84,5 @@ def test(output_directory = 'test_output'):
 
 
 if __name__ == '__main__':
-    sys.exit(test())
+    args = parser.parse_args()
+    sys.exit(test(args.focal_surface_filename,args.hologram_phase_filename,args.output_directory))

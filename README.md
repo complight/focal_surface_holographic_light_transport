@@ -5,6 +5,7 @@
 <img src='./media/teaser0.png' width=800>
 
 
+
 [Project Site](https://complightlab.com/publications/focal_surface_light_transport/)
 [Arxiv](https://arxiv.org/abs/2410.06854)
 [Manuscript](https://kaanaksit.com/assets/pdf/ZhengEtAl_SigAsia2024_Focal_surface_holographic_light_transport_using_learned_spatially_adaptive_convolutions.pdf)

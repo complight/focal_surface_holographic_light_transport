@@ -2,11 +2,8 @@
 
 [Chuanjun Zheng](https://scholar.google.com.hk/citations?user=9Jk_LC8AAAAJ&hl=zh-CN), [Yicheng Zhan](https://scholar.google.com/citations?hl=zh-CN&user=x2ptSYUAAAAJ), [Liang Shi](https://people.csail.mit.edu/liangs/), [Ozan Cakmakci](https://scholar.google.com/citations?user=xZLjeAMAAAAJ&hl=en), [Kaan Akşit](https://kaanaksit.com) 
 
+<img src='./media/teaser0.png' width=800>
 
-<video autoplay loop controls>
-  <source src="./media/focal_surface.mov" type="video/quicktime">
-  Your browser does not support the video tag.
-</video>
 
 [Project Site](https://complightlab.com/publications/focal_surface_light_transport/)
 [Arxiv](https://arxiv.org/abs/2410.06854)
@@ -36,6 +33,7 @@ git clone git@github.com:complight/focal_surface_holographic_light_transport.git
 cd focal_surface_holographic_light_transport
 python test.py  
 ```
+After running the script, you can find the output in the `test_output` directory. The primary result of the test will be the reconstructed image, which will be saved as `reconstruction_image.png`. 
 
 ### (2) Training
 #### (2.1) Preparing your dataset

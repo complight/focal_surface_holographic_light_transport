@@ -1,0 +1,50 @@
+{
+
+
+    "general"     : {
+                     "device"                : "cuda",
+                     "hologram number"       : 1,
+                     "print every"           : 20,
+                     "model"                 : "focal_surface_light_propagation_model",
+                     "result_dir"            : "/experiment/results/"
+
+                    },
+                    
+        "target"   : {
+                     "color depth"           : 8,
+                     "color channel"         : 3,
+                     "number of planes"      : 6,
+                     "location offset"       : 0,
+                     "volume depth"          : 5e-3
+                     },
+
+
+    "optimizer"   :{"weight_decay"           :   0,
+                    "milestones"             :  [300, 480],
+                    "gamma"                  :  0.5,
+                    "betas"                  :  [0.9, 0.999],
+                    "epsilon"                :  1e-8,
+                    "learning rate"          :  1e-4,
+                    "loss"                   : "1*MSE+0.5*FI",
+                    "epoch"                  :  1000
+                    },
+
+    "train"       :{
+                     "train depth file"      : "/dataset/train/depth/",
+                     "train phase file"      : "/dataset/train/phase/",
+                     "train target file"     : "/dataset/train/target/",
+                     "train mask file"       : "/dataset/train/mask/",
+                     "batch_size"            :1,
+                     "num_workers"           :4
+                     },
+
+
+    "test"       :{
+                      "test depth file"      : "/dataset/test/depth/",
+                     "test phase file"      : "/dataset/test/phase/",
+                     "test target file"     : "/dataset/test/target/",
+                     "test mask file"       : "/dataset/test/mask/"
+                     }
+
+
+}
